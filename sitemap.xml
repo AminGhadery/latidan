@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://AminGhadery.github.io/latidan/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- اگر صفحات دیگه داری، مثل درباره ما یا گالری، اینجا اضافه کن -->
+  <!-- مثال: -->
+  <!--
+  <url>
+    <loc>https://AminGhadery.github.io/latidan/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://AminGhadery.github.io/latidan/gallery.html</loc>
+    <priority>0.8</priority>
+  </url>
+  -->
+</urlset>
