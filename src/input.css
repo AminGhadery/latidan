@@ -1,0 +1,407 @@
+/* ==========================================================================
+   فایل منبع Tailwind — با دستور `npm run build` به assets/css/main.css تبدیل می‌شود
+   ========================================================================== */
+
+/* ==================== فونت وزیرمتن (self-host) ==================== */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../assets/fonts/Vazirmatn-Variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn Static';
+    src: url('../assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn Static';
+    src: url('../assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==================== پایه ==================== */
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    html.dark {
+        color-scheme: dark;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Vazirmatn', 'Vazirmatn Static', Tahoma, sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+        @apply bg-white text-gray-800 transition-colors duration-300;
+    }
+
+    html.dark body {
+        @apply bg-night text-gray-200;
+    }
+
+    /* جلوگیری از مخفی شدن عنوان بخش‌ها زیر هدر ثابت */
+    section[id] {
+        scroll-margin-top: 96px;
+    }
+
+    ::selection {
+        @apply bg-gold text-white;
+    }
+
+    /* حلقه فوکوس یکدست برای دسترس‌پذیری کیبورد */
+    a:focus-visible,
+    button:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 3px solid theme('colors.gold');
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+
+    /* اسکرول‌بار سفارشی */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-100;
+    }
+
+    html.dark ::-webkit-scrollbar-track {
+        @apply bg-nightSoft;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-earth rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gold;
+    }
+}
+
+/* ==================== کامپوننت‌ها ==================== */
+@layer components {
+
+    /* --- کارت عمومی --- */
+    .card {
+        @apply bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300;
+    }
+
+    html.dark .card {
+        @apply bg-nightSoft shadow-black/40;
+    }
+
+    .card:hover {
+        @apply shadow-2xl -translate-y-2;
+    }
+
+    /* --- دکمه‌ها --- */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 font-bold transition-all duration-300;
+    }
+
+    .btn-primary {
+        @apply bg-gold text-white hover:bg-yellow-600 hover:scale-105 shadow-lg;
+    }
+
+    .btn-outline {
+        @apply border-2 border-white text-white hover:bg-white hover:text-earth hover:scale-105;
+    }
+
+    /* --- عنوان بخش --- */
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-earth mb-4;
+    }
+
+    html.dark .section-title {
+        @apply text-gold;
+    }
+
+    .section-divider {
+        @apply w-24 h-1 bg-gold mx-auto rounded-full;
+    }
+}
+
+/* ==================== انیمیشن‌های کلیدی ==================== */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+    70% { box-shadow: 0 0 0 14px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.animate-fade-in-down { animation: fadeInDown 1s ease-out; }
+.animate-fade-in-up { animation: fadeInUp 1s ease-out 0.3s both; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* ==================== انیمیشن اسکرول ==================== */
+.fade-in,
+.fade-in-left,
+.fade-in-right {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in { transform: translateY(30px); }
+.fade-in-left { transform: translateX(50px); }
+.fade-in-right { transform: translateX(-50px); }
+
+.fade-in.visible,
+.fade-in-left.visible,
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ==================== هدر ==================== */
+#header {
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+}
+
+/* ==================== منوی موبایل ==================== */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+#mobile-menu.active {
+    max-height: 500px;
+}
+
+/* ==================== هیرو ==================== */
+.hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-cover {
+    object-fit: cover;
+}
+
+/* ==================== خط زمانی ==================== */
+.timeline-list {
+    position: relative;
+}
+
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, #D4AF37, rgba(212, 175, 55, 0.15));
+}
+
+.timeline-item {
+    position: relative;
+    padding-right: 44px;
+    padding-bottom: 32px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: #D4AF37;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/* خط زمانی در چیدمان چپ‌به‌راست (نسخه انگلیسی) */
+[dir="ltr"] .timeline-list::before {
+    right: auto;
+    left: 9px;
+}
+
+[dir="ltr"] .timeline-item {
+    padding-right: 0;
+    padding-left: 44px;
+}
+
+[dir="ltr"] .timeline-item::before {
+    right: auto;
+    left: 2px;
+}
+
+/* نوار پیشرفت در حالت چپ‌به‌راست */
+[dir="ltr"] #reading-progress {
+    right: auto;
+    left: 0;
+    background: linear-gradient(to right, #D4AF37, #4A90A4);
+}
+
+/* ==================== سوالات متداول ==================== */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 420px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+/* ==================== لایت‌باکس ==================== */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-overlay img {
+    max-width: 92vw;
+    max-height: 78vh;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* ==================== نقشه ==================== */
+#map {
+    height: 460px;
+    width: 100%;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+}
+
+.leaflet-popup-content {
+    margin: 14px 16px !important;
+    direction: rtl;
+    text-align: right;
+}
+
+.leaflet-container {
+    font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+}
+
+/* ==================== دکمه بازگشت به بالا ==================== */
+#scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==================== نوار پیشرفت خواندن ==================== */
+#reading-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to left, #D4AF37, #4A90A4);
+    z-index: 60;
+    transition: width 0.1s linear;
+}
+
+/* ==================== کاهش حرکت (دسترس‌پذیری) ==================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .fade-in,
+    .fade-in-left,
+    .fade-in-right {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ==================== چاپ ==================== */
+@media print {
+    #header,
+    #scroll-to-top,
+    #mobile-menu,
+    .lightbox-overlay,
+    #map {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+        background: #fff;
+    }
+}

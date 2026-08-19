@@ -1,0 +1,131 @@
+name: بررسی کیفیت وب‌سایت
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    name: بیلد CSS و بررسی لینک‌ها
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: دریافت کد
+        uses: actions/checkout@v4
+
+      - name: نصب Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: نصب وابستگی‌ها
+        run: npm install
+
+      - name: بیلد فایل CSS نهایی
+        run: npm run build
+
+      - name: بررسی هم‌خوانی CSS کامیت‌شده با فایل منبع
+        run: |
+          if ! git diff --quiet -- assets/css/main.css; then
+            echo "::error::فایل assets/css/main.css با src/input.css هم‌خوان نیست."
+            echo "لطفاً «npm run build» را اجرا کنید و خروجی را کامیت کنید."
+            git diff --stat -- assets/css/main.css
+            exit 1
+          fi
+          echo "✅ فایل CSS به‌روز است."
+
+      - name: بررسی ارجاع‌ها و لنگرهای داخلی
+        run: |
+          python3 - <<'PY'
+          import re, os, sys
+
+          errors = []
+          pages = ('index.html', 'en/index.html', '404.html')
+
+          for page in pages:
+              d = os.path.dirname(page) or '.'
+              src = open(page, encoding='utf-8').read()
+              ids = set(re.findall(r'id="([^"]+)"', src))
+
+              # ارجاع به فایل‌های محلی
+              for _, ref in re.findall(r'(src|href|srcset)="([^"]+)"', src):
+                  ref = ref.split('?')[0].split('#')[0]
+                  if not ref or ref.startswith(('http', 'mailto:', 'tel:', 'data:', '//')):
+                      continue
+                  target = (ref.replace('/latidan/', '', 1) if ref.startswith('/latidan/')
+                            else os.path.normpath(os.path.join(d, ref)))
+                  if not target or target == '.':
+                      target = 'index.html'
+                  if os.path.isdir(target):
+                      target = os.path.join(target, 'index.html')
+                  if not os.path.exists(target):
+                      errors.append(f'{page}: فایل یافت نشد → {ref}')
+
+              # لنگرهای داخل همان صفحه
+              for anchor in set(re.findall(r'href="#([^"]+)"', src)):
+                  if anchor and anchor not in ids:
+                      errors.append(f'{page}: لنگر بدون مقصد → #{anchor}')
+
+          for e in errors:
+              print(f'::error::{e}')
+          if not errors:
+              print('✅ همه ارجاع‌ها و لنگرها معتبرند.')
+          sys.exit(1 if errors else 0)
+          PY
+
+      - name: بررسی اعتبار JSON و XML
+        run: |
+          python3 - <<'PY'
+          import json, re, sys, xml.etree.ElementTree as ET
+
+          errors = 0
+
+          # اعتبارسنجی بلوک‌های JSON-LD
+          for page in ('index.html', 'en/index.html'):
+              html = open(page, encoding='utf-8').read()
+              for i, block in enumerate(re.findall(
+                      r'<script type="application/ld\+json">(.*?)</script>', html, re.S)):
+                  try:
+                      json.loads(block)
+                  except json.JSONDecodeError as e:
+                      print(f'::error file={page}::JSON-LD نامعتبر #{i+1}: {e}')
+                      errors += 1
+
+          # اعتبارسنجی manifest
+          try:
+              json.load(open('manifest.webmanifest', encoding='utf-8'))
+          except Exception as e:
+              print(f'::error::manifest.webmanifest نامعتبر است: {e}')
+              errors += 1
+
+          # اعتبارسنجی sitemap
+          try:
+              ET.parse('sitemap.xml')
+          except Exception as e:
+              print(f'::error::sitemap.xml نامعتبر است: {e}')
+              errors += 1
+
+          if errors == 0:
+              print('✅ همه فایل‌های JSON و XML معتبرند.')
+          sys.exit(1 if errors else 0)
+          PY
+
+      - name: بررسی حجم تصاویر
+        run: |
+          limit=$((400 * 1024))
+          status=0
+          for img in assets/img/*.jpg assets/img/*.png assets/img/*.webp; do
+            [ -e "$img" ] || continue
+            size=$(stat -c%s "$img")
+            if [ "$size" -gt "$limit" ]; then
+              echo "::warning file=$img::حجم تصویر بیش از ۴۰۰ کیلوبایت است ($((size / 1024))KB)"
+            fi
+          done
+          echo "✅ بررسی حجم تصاویر انجام شد."
+          exit $status

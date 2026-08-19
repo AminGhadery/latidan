@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://AminGhadery.github.io/latidan/sitemap.xml
+Sitemap: https://aminghadery.github.io/latidan/sitemap.xml
