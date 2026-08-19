@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>صفحه پیدا نشد | روستای لاتیدان (کلمتلی)</title>
+    <meta name="theme-color" content="#8B7355">
+    <link rel="icon" href="/latidan/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/latidan/assets/css/main.css">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('latidan-theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body class="bg-white dark:bg-night text-gray-800 dark:text-gray-200">
+
+    <main class="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-sand/40 to-white dark:from-nightSoft dark:to-night">
+        <div class="max-w-xl text-center">
+            <img src="/latidan/assets/img/icon-512.png" alt="نشان پل لاتیدان" width="120" height="120" class="mx-auto mb-8 rounded-3xl shadow-xl">
+
+            <p class="text-7xl md:text-8xl font-bold text-gold mb-4">۴۰۴</p>
+            <h1 class="text-2xl md:text-3xl font-bold text-earth dark:text-gold mb-4">این مسیر به پل نمی‌رسد!</h1>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+                صفحه‌ای که دنبالش بودید پیدا نشد. شاید آدرس را اشتباه وارد کرده‌اید یا این صفحه جابه‌جا شده است.
+                می‌توانید از صفحه اصلی، سفر خود به لاتیدان را دوباره شروع کنید.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/latidan/" class="btn btn-primary">بازگشت به صفحه اصلی</a>
+                <a href="/latidan/#attractions" class="btn border-2 border-earth dark:border-gold text-earth dark:text-gold hover:bg-earth hover:text-white dark:hover:bg-gold dark:hover:text-night">
+                    مشاهده جاذبه‌ها
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-500 mt-10">
+                <a href="/latidan/en/" class="underline hover:text-gold">English version</a>
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>

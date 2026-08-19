@@ -1,0 +1,12 @@
+# وابستگی‌های npm (فقط برای بیلد CSS لازم‌اند و در ریپو نگهداری نمی‌شوند)
+node_modules/
+package-lock.json
+
+# فایل‌های سیستمی
+.DS_Store
+Thumbs.db
+
+# ویرایشگرها
+.vscode/
+.idea/
+*.swp

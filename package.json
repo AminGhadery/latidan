@@ -1,0 +1,28 @@
+{
+  "name": "latidan",
+  "version": "2.0.0",
+  "private": true,
+  "description": "وب‌سایت معرفی روستای لاتیدان (کلمتلی) و پل تاریخی لاتیدان — طولانی‌ترین پل تاریخی ایران",
+  "homepage": "https://aminghadery.github.io/latidan/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AminGhadery/latidan.git"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/main.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/main.css --watch",
+    "serve": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "keywords": [
+    "latidan",
+    "kolometli",
+    "hormozgan",
+    "iran",
+    "heritage",
+    "tourism"
+  ],
+  "license": "SEE LICENSE IN LICENSE"
+}

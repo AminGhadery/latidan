@@ -11,24 +11,33 @@
 
     <!-- ==================== سئو و شبکه‌های اجتماعی ==================== -->
     <link rel="canonical" href="https://aminghadery.github.io/latidan/">
-    <meta name="theme-color" content="#8B7355">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%238B7355'/%3E%3Cpath%20d='M10%2042v-8a22%2022%200%200%201%2044%200v8h-4v-8a18%2018%200%200%200-36%200v8z'%20fill='%23D4AF37'/%3E%3Crect%20x='10'%20y='44'%20width='8'%20height='10'%20fill='%23D4AF37'/%3E%3Crect%20x='46'%20y='44'%20width='8'%20height='10'%20fill='%23D4AF37'/%3E%3C/svg%3E">
+    <link rel="alternate" hreflang="fa" href="https://aminghadery.github.io/latidan/">
+    <link rel="alternate" hreflang="en" href="https://aminghadery.github.io/latidan/en/">
+    <link rel="alternate" hreflang="x-default" href="https://aminghadery.github.io/latidan/">
+    <meta name="theme-color" content="#8B7355" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#12100E" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fa_IR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:site_name" content="روستای لاتیدان (کلمتلی)">
     <meta property="og:title" content="روستای لاتیدان (کلمتلی) | طولانی‌ترین پل تاریخی ایران">
     <meta property="og:description" content="کشف تاریخ و طبیعت بکر هرمزگان؛ پل تاریخی لاتیدان با ۲۳۳ دهانه و بیش از یک کیلومتر طول، گنجینه‌ای از دوره صفویه در قلب جنوب ایران.">
     <meta property="og:url" content="https://aminghadery.github.io/latidan/">
-    <meta property="og:image" content="https://aminghadery.github.io/latidan/%D9%BE%D9%84_-%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86.jpg">
+    <meta property="og:image" content="https://aminghadery.github.io/latidan/assets/img/latidan-bridge.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="466">
     <meta property="og:image:alt" content="پل تاریخی لاتیدان">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="روستای لاتیدان (کلمتلی) | طولانی‌ترین پل تاریخی ایران">
     <meta name="twitter:description" content="کشف تاریخ و طبیعت بکر هرمزگان؛ پل تاریخی لاتیدان، شاهکار معماری دوره صفویه در قلب جنوب ایران.">
-    <meta name="twitter:image" content="https://aminghadery.github.io/latidan/%D9%BE%D9%84_-%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86.jpg">
+    <meta name="twitter:image" content="https://aminghadery.github.io/latidan/assets/img/latidan-bridge.jpg">
 
     <!-- داده‌های ساختاریافته (Schema.org) -->
     <script type="application/ld+json">
@@ -37,137 +46,222 @@
         "@graph": [
             {
                 "@type": "WebSite",
+                "@id": "https://aminghadery.github.io/latidan/#website",
                 "name": "روستای لاتیدان (کلمتلی)",
                 "url": "https://aminghadery.github.io/latidan/",
                 "inLanguage": "fa-IR"
             },
             {
                 "@type": "TouristAttraction",
+                "@id": "https://aminghadery.github.io/latidan/#bridge",
                 "name": "پل تاریخی لاتیدان",
-                "alternateName": "پل کول",
-                "description": "پل تاریخی لاتیدان با بیش از یک کیلومتر طول و ۲۳۳ دهانه، طولانی‌ترین پل تاریخی ایران است که در دوره صفویه بر روی رودخانه کل ساخته شده است.",
+                "alternateName": ["پل کول", "پل کل", "Latidan Bridge"],
+                "description": "پل تاریخی لاتیدان با بیش از یک کیلومتر طول و ۲۳۳ دهانه، طولانی‌ترین پل تاریخی ایران است که در دوره صفویه بر روی رودخانه کل ساخته شده و با شماره ۲۰۰۵ در فهرست آثار ملی ایران به ثبت رسیده است.",
+                "image": "https://aminghadery.github.io/latidan/assets/img/latidan-bridge.jpg",
+                "url": "https://aminghadery.github.io/latidan/",
+                "isAccessibleForFree": true,
+                "touristType": ["گردشگر تاریخی", "طبیعت‌گرد"],
                 "address": {
                     "@type": "PostalAddress",
                     "addressRegion": "هرمزگان",
                     "addressLocality": "بندرعباس",
                     "addressCountry": "IR"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 27.1919,
+                    "longitude": 55.7572
                 }
+            },
+            {
+                "@type": "Place",
+                "@id": "https://aminghadery.github.io/latidan/#village",
+                "name": "روستای لاتیدان (کلمتلی)",
+                "description": "روستایی در دهستان گچین، بخش مرکزی شهرستان بندرعباس، استان هرمزگان.",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 27.1428,
+                    "longitude": 55.7957
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://aminghadery.github.io/latidan/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "پل لاتیدان کجاست و چگونه می‌توان به آن رسید؟",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "پل تاریخی لاتیدان در حدود ۵۰ تا ۸۰ کیلومتری غرب بندرعباس، بر روی رودخانه کل و در محدوده روستاهای لاتیدان، نیمه‌کار و آرابی قرار دارد. برای رسیدن به آن می‌توانید از جاده بندرعباس به سمت بندر خمیر و لار حرکت کنید."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "چرا به این پل «پل کول» هم می‌گویند؟",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "«پل کول» نام محلی این پل است که از رودخانه کول (کل) گرفته شده؛ رودخانه‌ای سیلابی که پل بر روی بستر عریض آن ساخته شده است."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "بهترین زمان بازدید از لاتیدان چه فصلی است؟",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "از اواسط پاییز تا اوایل بهار بهترین زمان بازدید است، چون هوای جنوب ایران در این ماه‌ها معتدل و دلپذیر است. در فصل بارندگی رودخانه کل پرآب می‌شود و مناظر تماشایی‌تری دارد."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "آیا پل لاتیدان در فهرست آثار ملی ثبت شده است؟",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "بله، پل لاتیدان در یکم اردیبهشت ۱۳۷۷ با شماره ثبت ۲۰۰۵ به عنوان یکی از آثار ملی ایران به ثبت رسیده است."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "چه جاذبه‌های دیگری در اطراف لاتیدان وجود دارد؟",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "علاوه بر پل تاریخی، می‌توانید از کوه لاتیدان، رودخانه کل و روستاهای همجوار مانند گچین بالا، دمیلو، آرابی و نیمه‌کار دیدن کنید."
+                        }
+                    }
+                ]
             }
         ]
     }
     </script>
 
-    <!-- پیش‌اتصال به سرویس‌های CDN -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <!-- ==================== استایل‌ها ==================== -->
+    <link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- تنظیمات Tailwind -->
+    <!-- جلوگیری از پرش رنگ هنگام بارگذاری در حالت تاریک -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        earth: '#8B7355',
-                        river: '#4A90A4',
-                        mountain: '#5F8575',
-                        gold: '#D4AF37',
-                        sand: '#E8D5B7'
-                    }
+        (function () {
+            try {
+                var saved = localStorage.getItem('latidan-theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark');
                 }
-            }
-        }
+            } catch (e) {}
+        })();
     </script>
-
-    <!-- فونت فارسی Vazir -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
-
-    <!-- فایل CSS سفارشی -->
-    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-    <!-- ==================== Header (هدر ثابت) ==================== -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- لوگو و نام -->
-            <a href="#home" class="flex items-center gap-3" aria-label="بازگشت به ابتدای صفحه">
-                <div class="w-12 h-12 bg-gradient-to-br from-earth to-gold rounded-lg flex items-center justify-center shadow-lg">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+    <!-- نوار پیشرفت خواندن -->
+    <div id="reading-progress" aria-hidden="true"></div>
+
+    <!-- پرش به محتوا (دسترس‌پذیری) -->
+    <a href="#about" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[70] focus:bg-gold focus:text-white focus:px-6 focus:py-3 focus:rounded-full">
+        پرش به محتوای اصلی
+    </a>
+
+    <!-- ==================== هدر ==================== -->
+    <header id="header" class="fixed top-0 w-full bg-white/95 dark:bg-night/95 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center gap-4">
+            <!-- لوگو -->
+            <a href="#home" class="flex items-center gap-3 group shrink-0">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-earth to-gold rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                     </svg>
                 </div>
-                <h1 class="text-lg md:text-2xl font-bold text-earth">روستای لاتیدان <span class="text-gold">(کلمتلی)</span></h1>
+                <h1 class="text-base md:text-2xl font-bold text-earth dark:text-gold">روستای لاتیدان <span class="text-gold dark:text-sand">(کلمتلی)</span></h1>
             </a>
 
             <!-- منوی ناوبری دسکتاپ -->
-            <nav class="hidden lg:flex gap-6" aria-label="ناوبری اصلی">
-                <a href="#home" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">خانه</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">درباره روستا</a>
-                <a href="#attractions" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">جاذبه‌ها</a>
-                <a href="#history" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">تاریخچه</a>
-                <a href="#culture" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">طبیعت و فرهنگ</a>
-                <a href="#faq" class="nav-link text-gray-700 hover:text-gold transition-colors font-semibold">سوالات متداول</a>
+            <nav class="hidden lg:flex gap-5 xl:gap-6" aria-label="ناوبری اصلی">
+                <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">خانه</a>
+                <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">درباره روستا</a>
+                <a href="#attractions" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">جاذبه‌ها</a>
+                <a href="#history" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">تاریخچه</a>
+                <a href="#map-section" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">نقشه</a>
+                <a href="#travel" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">راهنمای سفر</a>
+                <a href="#faq" class="nav-link text-gray-700 dark:text-gray-300 hover:text-gold dark:hover:text-gold transition-colors font-semibold">سوالات متداول</a>
             </nav>
 
-            <!-- دکمه منوی موبایل -->
-            <button id="mobile-menu-btn" class="lg:hidden text-earth p-2" aria-label="باز و بسته کردن منو" aria-expanded="false">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <!-- ابزارها -->
+            <div class="flex items-center gap-2 shrink-0">
+                <!-- تغییر زبان -->
+                <a href="en/" class="hidden sm:inline-flex items-center gap-1 text-sm font-bold text-earth dark:text-gold border-2 border-earth/30 dark:border-gold/40 rounded-full px-3 py-1.5 hover:bg-earth hover:text-white dark:hover:bg-gold dark:hover:text-night transition-colors" aria-label="Switch to English version">
+                    EN
+                </a>
+
+                <!-- حالت تاریک -->
+                <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center text-earth dark:text-gold hover:bg-sand/50 dark:hover:bg-nightSoft transition-colors" aria-label="تغییر حالت روشن و تاریک">
+                    <svg id="icon-sun" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="icon-moon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+
+                <!-- دکمه منوی موبایل -->
+                <button id="mobile-menu-btn" class="lg:hidden text-earth dark:text-gold p-2" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <!-- منوی موبایل -->
-        <div id="mobile-menu" class="lg:hidden bg-white border-t">
+        <div id="mobile-menu" class="lg:hidden bg-white dark:bg-night border-t dark:border-white/10">
             <nav class="container mx-auto px-4 py-4 flex flex-col gap-4" aria-label="ناوبری موبایل">
-                <a href="#home" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">خانه</a>
-                <a href="#about" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">درباره روستا</a>
-                <a href="#attractions" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">جاذبه‌ها</a>
-                <a href="#history" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">تاریخچه</a>
-                <a href="#culture" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">طبیعت و فرهنگ</a>
-                <a href="#faq" class="mobile-nav-link text-gray-700 hover:text-gold transition-colors font-semibold">سوالات متداول</a>
+                <a href="#home" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">خانه</a>
+                <a href="#about" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">درباره روستا</a>
+                <a href="#attractions" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">جاذبه‌ها</a>
+                <a href="#history" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">تاریخچه</a>
+                <a href="#map-section" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">نقشه</a>
+                <a href="#travel" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">راهنمای سفر</a>
+                <a href="#culture" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">طبیعت و فرهنگ</a>
+                <a href="#faq" class="mobile-nav-link text-gray-700 dark:text-gray-300 hover:text-gold font-semibold">سوالات متداول</a>
+                <a href="en/" class="mobile-nav-link text-earth dark:text-gold font-bold">🌐 English version</a>
             </nav>
         </div>
     </header>
 
     <!-- ==================== بخش Hero ==================== -->
-    <section id="home" class="hero-section relative flex items-center justify-center overflow-hidden">
-        <!-- تصویر پس‌زمینه: پل تاریخی لاتیدان -->
-        <img
-            src="پل_-لاتیدان.jpg"
-            alt="پل تاریخی لاتیدان، طولانی‌ترین پل تاریخی ایران"
-            class="hero-bg"
-            fetchpriority="high"
-        >
-        <div class="absolute inset-0 bg-gradient-to-br from-earth/85 via-mountain/70 to-river/80"></div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <picture>
+            <source srcset="assets/img/latidan-bridge.webp" type="image/webp">
+            <img
+                src="assets/img/latidan-bridge.jpg"
+                alt="پل تاریخی لاتیدان، طولانی‌ترین پل تاریخی ایران"
+                class="absolute inset-0 w-full h-full object-cover"
+                width="800" height="466"
+                fetchpriority="high"
+            >
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-br from-earth/85 via-mountain/70 to-river/80 dark:from-night/90 dark:via-earth/70 dark:to-night/90"></div>
 
         <!-- محتوای متنی -->
-        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto pt-24 pb-16">
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto pt-28 pb-20">
             <span class="inline-block bg-gold/90 text-white text-sm md:text-base font-bold px-6 py-2 rounded-full shadow-lg mb-8 animate-fade-in-down">
                 🏛 طولانی‌ترین پل تاریخی ایران
             </span>
             <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-down drop-shadow-lg leading-tight">
                 به روستای لاتیدان خوش آمدید
             </h2>
-            <p class="text-lg md:text-2xl mb-10 animate-fade-in-up opacity-90 drop-shadow-md leading-relaxed">
+            <p class="text-lg md:text-2xl mb-10 animate-fade-in-up opacity-95 drop-shadow-md leading-relaxed">
                 کشف تاریخ و طبیعت بکر هرمزگان در قلب جنوب ایران؛
                 جایی که پل تاریخی لاتیدان با ۲۳۳ دهانه، هنوز شکوه صفویه را روایت می‌کند.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#attractions" class="inline-block bg-gold hover:bg-gold/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    کشف جاذبه‌ها
-                </a>
-                <a href="https://www.google.com/maps/search/?api=1&query=%D9%BE%D9%84%20%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86" target="_blank" rel="noopener" class="inline-block bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white/50">
-                    مشاهده در نقشه
-                </a>
+                <a href="#attractions" class="btn btn-primary py-4">کشف جاذبه‌ها</a>
+                <a href="#map-section" class="btn btn-outline py-4 bg-white/20 backdrop-blur-sm">مشاهده روی نقشه</a>
             </div>
         </div>
 
         <!-- اسکرول اینیدکیتور -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
             <svg class="w-6 h-6 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
@@ -175,105 +269,97 @@
     </section>
 
     <!-- ==================== بخش آمار ==================== -->
-    <section id="stats" class="py-16 bg-gradient-to-l from-earth to-mountain text-white" aria-label="آمار پل تاریخی لاتیدان">
+    <section id="stats" class="py-16 bg-gradient-to-l from-earth to-mountain dark:from-nightSoft dark:to-night text-white" aria-label="آمار پل تاریخی لاتیدان">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
-                <div class="stat-card">
+                <div>
                     <p class="text-4xl md:text-5xl font-bold text-gold mb-2" data-counter data-target="500" data-suffix="+">۰</p>
                     <p class="text-sm md:text-base opacity-90">سال قدمت (دوره صفویه)</p>
                 </div>
-                <div class="stat-card">
+                <div>
                     <p class="text-4xl md:text-5xl font-bold text-gold mb-2" data-counter data-target="1000" data-suffix="+">۰</p>
                     <p class="text-sm md:text-base opacity-90">متر طول پل</p>
                 </div>
-                <div class="stat-card">
+                <div>
                     <p class="text-4xl md:text-5xl font-bold text-gold mb-2" data-counter data-target="233">۰</p>
                     <p class="text-sm md:text-base opacity-90">دهانه سنگی</p>
                 </div>
-                <div class="stat-card">
-                    <p class="text-4xl md:text-5xl font-bold text-gold mb-2" data-counter data-target="4">۰</p>
-                    <p class="text-sm md:text-base opacity-90">روستای همجوار</p>
+                <div>
+                    <p class="text-4xl md:text-5xl font-bold text-gold mb-2" data-counter data-target="2005">۰</p>
+                    <p class="text-sm md:text-base opacity-90">شماره ثبت ملی</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== بخش درباره روستا ==================== -->
-    <section id="about" class="py-20 bg-gradient-to-b from-white to-sand/30">
+    <section id="about" class="py-20 bg-gradient-to-b from-white to-sand/30 dark:from-night dark:to-nightSoft">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12 fade-in">
-                <h3 class="text-3xl md:text-4xl font-bold text-earth mb-4">درباره روستای لاتیدان</h3>
-                <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                <h3 class="section-title">درباره روستای لاتیدان</h3>
+                <div class="section-divider"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                 <!-- تصویر روستا -->
                 <div class="relative fade-in-left">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl image-container">
-                        <img
-                            src="a.jpg"
-                            alt="نمای روستای لاتیدان"
-                            class="image-cover aspect-video"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <picture>
+                            <source srcset="assets/img/latidan-village.webp" type="image/webp">
+                            <img src="assets/img/latidan-village.jpg" alt="نمای روستای لاتیدان" class="w-full object-cover aspect-video" width="640" height="560" loading="lazy" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                        <!-- کارت شناور ثبت ملی -->
                         <div class="absolute bottom-4 right-4 bg-gold text-white rounded-xl px-5 py-3 shadow-xl flex items-center gap-3">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
                             <div>
                                 <p class="text-xs opacity-90">ثبت ملی ایران</p>
-                                <p class="font-bold text-lg leading-none">شماره ۱۹۹۸</p>
+                                <p class="font-bold text-lg leading-none">شماره ۲۰۰۵</p>
                             </div>
                         </div>
                     </div>
-                    <!-- تصویر کوچک شناور -->
-                    <div class="hidden md:block absolute -left-6 -bottom-8 w-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-white image-container">
-                        <img
-                            src="12568742_1661492437438501_72652611_n_1_.jpg"
-                            alt="منظره اطراف روستای لاتیدان"
-                            class="image-cover h-36 w-full"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                    <div class="hidden md:block absolute -left-6 -bottom-8 w-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-nightSoft">
+                        <picture>
+                            <source srcset="assets/img/village-life.webp" type="image/webp">
+                            <img src="assets/img/village-life.jpg" alt="منظره اطراف روستای لاتیدان" class="object-cover h-36 w-full" width="640" height="640" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                 </div>
 
                 <!-- متن توضیحات -->
                 <div class="fade-in-right">
-                    <p class="text-gray-700 leading-relaxed text-justify mb-6 text-lg">
-                        روستای <strong class="text-earth">لاتیدان</strong> (همچنین با نام کلمتلی شناخته می‌شود) یکی از روستاهای باستانی و زیبای استان هرمزگان است که در دهستان گچین، بخش مرکزی شهرستان بندرعباس واقع شده است. این روستای تاریخی از شمال به کوه مهیب لاتیدان، از جنوب به پایگاه نیروی هوایی، از شرق به روستای گچین بالا، از غرب به رودخانه کل و از شمال شرقی به روستای دمیلو محدود می‌شود.
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify mb-6 text-lg">
+                        روستای <strong class="text-earth dark:text-gold">لاتیدان</strong> (همچنین با نام کلمتلی شناخته می‌شود) یکی از روستاهای باستانی و زیبای استان هرمزگان است که در دهستان گچین، بخش مرکزی شهرستان بندرعباس واقع شده است. این روستای تاریخی از شمال به کوه مهیب لاتیدان، از جنوب به پایگاه نیروی هوایی، از شرق به روستای گچین بالا، از غرب به رودخانه کل و از شمال شرقی به روستای دمیلو محدود می‌شود.
                     </p>
-                    <p class="text-gray-700 leading-relaxed text-justify mb-6 text-lg">
-                        لاتیدان با داشتن <strong class="text-gold">طولانی‌ترین پل تاریخی ایران</strong> که در دوره صفویه ساخته شده، نقطه عطفی در تاریخ معماری و مهندسی کشور محسوب می‌شود. این پل باشکوه با طولی بیش از یک کیلومتر و ۲۳۳ ستون سنگی، بر روی رودخانه کل قرار دارد و در گذشته مسیر جاده ابریشم جنوبی را تسهیل می‌کرد. این روستا با ترکیبی منحصربه‌فرد از تاریخ کهن، طبیعت دست‌نخورده و فرهنگ غنی جنوب ایران، مقصدی ایده‌آل برای گردشگران و علاقه‌مندان به میراث فرهنگی است.
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify mb-6 text-lg">
+                        نام لاتیدان با <strong class="text-gold">طولانی‌ترین پل تاریخی ایران</strong> گره خورده است؛ پلی از دوره صفویه با طولی بیش از یک کیلومتر و ۲۳۳ دهانه که بر روی رودخانه سیلابی کل ساخته شده و روزگاری مسیر کاروان‌رو شیراز به بندرعباس و شریان تجاری جنوب کشور را تسهیل می‌کرد. امروز این روستا با ترکیبی از تاریخ کهن، طبیعت دست‌نخورده و فرهنگ غنی جنوب، مقصدی ایده‌آل برای گردشگران و علاقه‌مندان به میراث فرهنگی است.
                     </p>
 
                     <!-- ویژگی‌های کلیدی -->
                     <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow-md">
-                            <div class="w-10 h-10 bg-river/20 rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5 text-river" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="flex items-center gap-3 bg-white dark:bg-nightSoft p-4 rounded-lg shadow-md">
+                            <div class="w-10 h-10 bg-river/20 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-river" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500">موقعیت</p>
-                                <p class="font-bold text-earth">هرمزگان</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">موقعیت</p>
+                                <p class="font-bold text-earth dark:text-gold">هرمزگان</p>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow-md">
-                            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="flex items-center gap-3 bg-white dark:bg-nightSoft p-4 rounded-lg shadow-md">
+                            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
                                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-sm text-gray-500">دوره</p>
-                                <p class="font-bold text-earth">صفویه</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">دوره</p>
+                                <p class="font-bold text-earth dark:text-gold">صفویه</p>
                             </div>
                         </div>
                     </div>
@@ -283,357 +369,408 @@
     </section>
 
     <!-- ==================== بخش جاذبه‌ها ==================== -->
-    <section id="attractions" class="py-20 bg-white">
+    <section id="attractions" class="py-20 bg-white dark:bg-night">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
-                <h3 class="text-3xl md:text-4xl font-bold text-earth mb-4">جاذبه‌های گردشگری</h3>
-                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                <h3 class="section-title">جاذبه‌های گردشگری</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                     لاتیدان با میراثی غنی از تاریخ و طبیعت، گنجینه‌ای از جاذبه‌های بی‌نظیر است
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- کارت 1: پل تاریخی لاتیدان -->
-                <div class="attraction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- کارت ۱ -->
+                <article class="card fade-in">
                     <div class="relative h-56 overflow-hidden">
-                        <img
-                            src="پل_-لاتیدان.jpg"
-                            alt="پل تاریخی لاتیدان"
-                            class="image-cover h-full"
-                            loading="lazy"
-                            decoding="async"
-                        >
-                        <div class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">
-                            طولانی‌ترین پل ایران
-                        </div>
+                        <picture>
+                            <source srcset="assets/img/latidan-bridge.webp" type="image/webp">
+                            <img src="assets/img/latidan-bridge.jpg" alt="پل تاریخی لاتیدان" class="object-cover h-full w-full" width="800" height="466" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute top-4 right-4 bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">طولانی‌ترین پل ایران</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-earth mb-3">پل تاریخی لاتیدان</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            این پل باشکوه با طولی بیش از <strong>1 کیلومتر</strong> و <strong>233 دهانه</strong> سنگی، شاهکاری از معماری دوره صفویه است که بر روی رودخانه کل ساخته شده و مسیر کاروان‌رو شیراز به بندرعباس را تسهیل می‌کرد.
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-3">پل تاریخی لاتیدان</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-justify">
+                            پلی باشکوه با طولی بیش از <strong>۱ کیلومتر</strong> و <strong>۲۳۳ دهانه</strong>، شاهکاری از معماری صفوی بر روی رودخانه کل که مسیر کاروان‌رو شیراز به بندرعباس را تسهیل می‌کرد.
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=%D9%BE%D9%84%20%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86" target="_blank" rel="noopener" class="inline-flex items-center text-gold font-semibold hover:text-earth transition-colors">
-                            مشاهده در نقشه
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </a>
+                        <button type="button" class="map-focus inline-flex items-center text-gold font-semibold hover:text-earth dark:hover:text-sand transition-colors" data-lat="27.1919" data-lng="55.7572" data-zoom="14">
+                            نمایش روی نقشه
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
                     </div>
-                </div>
+                </article>
 
-                <!-- کارت 2: رودخانه کل -->
-                <div class="attraction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- کارت ۲ -->
+                <article class="card fade-in">
                     <div class="relative h-56 overflow-hidden">
-                        <img
-                            src="رود خانه کُل.jpg"
-                            alt="رودخانه کل"
-                            class="image-cover h-full"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <picture>
+                            <source srcset="assets/img/kol-river.webp" type="image/webp">
+                            <img src="assets/img/kol-river.jpg" alt="رودخانه کل" class="object-cover h-full w-full" width="720" height="480" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-earth mb-3">رودخانه کل</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-3">رودخانه کل</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-justify">
                             رودخانه‌ای سیلابی و پرآب که از غرب روستا می‌گذرد و مناظر طبیعی خیره‌کننده‌ای را در فصول مختلف سال به نمایش می‌گذارد. این رودخانه حیات‌بخش کشاورزی منطقه است.
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=%D8%B1%D9%88%D8%AF%D8%AE%D8%A7%D9%86%D9%87%20%DA%A9%D9%84%20%D9%87%D8%B1%D9%85%D8%B2%DA%AF%D8%A7%D9%86" target="_blank" rel="noopener" class="inline-flex items-center text-gold font-semibold hover:text-earth transition-colors">
-                            مشاهده در نقشه
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </a>
+                        <button type="button" class="map-focus inline-flex items-center text-gold font-semibold hover:text-earth dark:hover:text-sand transition-colors" data-lat="27.1700" data-lng="55.7700" data-zoom="13">
+                            نمایش روی نقشه
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
                     </div>
-                </div>
+                </article>
 
-                <!-- کارت 3: کوه لاتیدان -->
-                <div class="attraction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- کارت ۳ -->
+                <article class="card fade-in">
                     <div class="relative h-56 overflow-hidden">
-                        <img
-                            src="کوه لاتیدان.jpeg"
-                            alt="کوه لاتیدان"
-                            class="image-cover h-full"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <picture>
+                            <source srcset="assets/img/latidan-mountain.webp" type="image/webp">
+                            <img src="assets/img/latidan-mountain.jpg" alt="کوه لاتیدان" class="object-cover h-full w-full" width="1001" height="637" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-earth mb-3">کوه لاتیدان</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            کوهستانی مهیب در شمال روستا که با ارتفاعات صخره‌ای و پوشش گیاهی منحصربه‌فرد، چشم‌اندازی بی‌نظیر از دشت و روستاهای اطراف ارائه می‌دهد و مقصدی عالی برای کوهنوردان است.
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-3">کوه لاتیدان</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-justify">
+                            کوهستانی مهیب در شمال روستا که با ارتفاعات صخره‌ای و پوشش گیاهی منحصربه‌فرد، چشم‌اندازی بی‌نظیر از دشت و روستاهای اطراف ارائه می‌دهد.
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=%DA%A9%D9%88%D9%87%20%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86" target="_blank" rel="noopener" class="inline-flex items-center text-gold font-semibold hover:text-earth transition-colors">
-                            مشاهده در نقشه
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </a>
+                        <button type="button" class="map-focus inline-flex items-center text-gold font-semibold hover:text-earth dark:hover:text-sand transition-colors" data-lat="27.1600" data-lng="55.7957" data-zoom="13">
+                            نمایش روی نقشه
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
                     </div>
-                </div>
+                </article>
 
-                <!-- کارت 4: روستاهای اطراف -->
-                <div class="attraction-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- کارت ۴ -->
+                <article class="card fade-in">
                     <div class="relative h-56 overflow-hidden">
-                        <img
-                            src="ورودی کلمتلی.jpg"
-                            alt="ورودی روستای کلمتلی"
-                            class="image-cover h-full"
-                            loading="lazy"
-                            decoding="async"
-                        >
+                        <picture>
+                            <source srcset="assets/img/kolometli-entrance.webp" type="image/webp">
+                            <img src="assets/img/kolometli-entrance.jpg" alt="ورودی روستای کلمتلی" class="object-cover h-full w-full" width="320" height="320" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-earth mb-3">روستاهای همجوار</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            روستاهای زیبایی مانند <strong>آرابی، نیمه‌کار، گچین بالا</strong> و <strong>دمیلو</strong> در اطراف لاتیدان واقع شده‌اند که هرکدام با فرهنگ و معماری سنتی خود، تجربه‌ای اصیل از زندگی روستایی ارائه می‌دهند.
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-3">روستاهای همجوار</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4 text-justify">
+                            روستاهایی مانند <strong>آرابی، نیمه‌کار، گچین بالا</strong> و <strong>دمیلو</strong> در اطراف لاتیدان قرار دارند که هرکدام با فرهنگ و معماری سنتی خود، تجربه‌ای اصیل از زندگی روستایی ارائه می‌دهند.
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=%DA%AF%DA%86%DB%8C%D9%86%20%D8%A8%D9%86%D8%AF%D8%B1%D8%B9%D8%A8%D8%A7%D8%B3" target="_blank" rel="noopener" class="inline-flex items-center text-gold font-semibold hover:text-earth transition-colors">
-                            مشاهده در نقشه
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </a>
+                        <button type="button" class="map-focus inline-flex items-center text-gold font-semibold hover:text-earth dark:hover:text-sand transition-colors" data-lat="27.1428" data-lng="55.7957" data-zoom="13">
+                            نمایش روی نقشه
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- ==================== گالری تصاویر ==================== -->
             <div class="mt-24 max-w-6xl mx-auto">
                 <div class="text-center mb-12 fade-in">
-                    <h4 class="text-2xl md:text-3xl font-bold text-earth mb-4">گالری تصاویر لاتیدان</h4>
-                    <div class="w-20 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-                    <p class="text-gray-600 text-base">برای مشاهده هر تصویر در اندازه بزرگ، روی آن کلیک کنید</p>
+                    <h4 class="text-2xl md:text-3xl font-bold text-earth dark:text-gold mb-4">گالری تصاویر لاتیدان</h4>
+                    <div class="section-divider mb-4"></div>
+                    <p class="text-gray-600 dark:text-gray-400">برای مشاهده هر تصویر در اندازه بزرگ، روی آن کلیک کنید</p>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in-left">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="پل تاریخی لاتیدان" aria-label="نمایش بزرگ‌نمای پل تاریخی لاتیدان">
-                            <img src="پل_-لاتیدان.jpg" alt="پل تاریخی لاتیدان" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="رودخانه کل" aria-label="نمایش بزرگ‌نمای رودخانه کل">
-                            <img src="رود خانه کُل.jpg" alt="رودخانه کل" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in-right">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="کوه لاتیدان" aria-label="نمایش بزرگ‌نمای کوه لاتیدان">
-                            <img src="کوه لاتیدان.jpeg" alt="کوه لاتیدان" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in-left">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="ورودی روستای کلمتلی" aria-label="نمایش بزرگ‌نمای ورودی روستای کلمتلی">
-                            <img src="ورودی کلمتلی.jpg" alt="ورودی روستای کلمتلی" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="آشنایی با پل لاتیدان بندرعباس" aria-label="نمایش بزرگ‌نمای پل لاتیدان">
-                            <img src="آشنایی-با-پل-لاتیدان-بندرعباس.jpg" alt="پل لاتیدان در بندرعباس" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
-                    <div class="image-container shadow-lg h-48 md:h-64 fade-in-right">
-                        <button type="button" class="lightbox-trigger group block w-full h-full relative" data-lightbox data-caption="بازدید از طولانی‌ترین پل تاریخی هرمزگان" aria-label="نمایش بزرگ‌نمای بازدید از پل تاریخی هرمزگان">
-                            <img src="از-طولانی-_ترین-پل-تاریخی-هرمزگان-بازدید-کنید.jpg" alt="بازدید از پل تاریخی لاتیدان" class="image-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                            <span class="lightbox-zoom-hint">🔍</span>
-                        </button>
-                    </div>
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/latidan-bridge.jpg" data-caption="پل تاریخی لاتیدان">
+                        <picture>
+                            <source srcset="assets/img/latidan-bridge.webp" type="image/webp">
+                            <img src="assets/img/latidan-bridge.jpg" alt="پل تاریخی لاتیدان" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
+
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/kol-river.jpg" data-caption="رودخانه کل">
+                        <picture>
+                            <source srcset="assets/img/kol-river.webp" type="image/webp">
+                            <img src="assets/img/kol-river.jpg" alt="رودخانه کل" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
+
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/latidan-mountain.jpg" data-caption="کوه لاتیدان">
+                        <picture>
+                            <source srcset="assets/img/latidan-mountain.webp" type="image/webp">
+                            <img src="assets/img/latidan-mountain.jpg" alt="کوه لاتیدان" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
+
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/kolometli-entrance.jpg" data-caption="ورودی روستای کلمتلی">
+                        <picture>
+                            <source srcset="assets/img/kolometli-entrance.webp" type="image/webp">
+                            <img src="assets/img/kolometli-entrance.jpg" alt="ورودی روستای کلمتلی" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
+
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/bridge-arches.jpg" data-caption="دهانه‌های پل لاتیدان">
+                        <picture>
+                            <source srcset="assets/img/bridge-arches.webp" type="image/webp">
+                            <img src="assets/img/bridge-arches.jpg" alt="دهانه‌های پل لاتیدان" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
+
+                    <button type="button" class="group relative block w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg fade-in" data-lightbox data-src="assets/img/bridge-visit.jpg" data-caption="بازدید از طولانی‌ترین پل تاریخی هرمزگان">
+                        <picture>
+                            <source srcset="assets/img/bridge-visit.webp" type="image/webp">
+                            <img src="assets/img/bridge-visit.jpg" alt="بازدید از پل تاریخی لاتیدان" class="object-cover h-full w-full transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center text-white text-3xl opacity-0 group-hover:opacity-100">🔍</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== بخش تاریخچه ==================== -->
-    <section id="history" class="py-20 bg-gradient-to-b from-white to-sand/30">
+    <section id="history" class="py-20 bg-gradient-to-b from-white to-sand/30 dark:from-night dark:to-nightSoft">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
-                <h3 class="text-3xl md:text-4xl font-bold text-earth mb-4">تاریخچه پل لاتیدان</h3>
-                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                    روایتی از پنج قرن تاریخ؛ از فرمان شاه عباس اول تا مرمت‌های امروز
+                <h3 class="section-title">تاریخچه پل لاتیدان</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                    روایتی از پنج قرن تاریخ؛ از دوران صفوی تا مرمت‌های امروز
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                <!-- تصویر کناری -->
-                <div class="fade-in-left hidden md:block">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl image-container">
-                        <img
-                            src="از-طولانی-_ترین-پل-تاریخی-هرمزگان-بازدید-کنید.jpg"
-                            alt="بازدید از پل تاریخی لاتیدان"
-                            class="image-cover aspect-[4/5]"
-                            loading="lazy"
-                            decoding="async"
-                        >
+            <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                <div class="fade-in-left hidden md:block md:sticky md:top-28">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <picture>
+                            <source srcset="assets/img/bridge-visit.webp" type="image/webp">
+                            <img src="assets/img/bridge-visit.jpg" alt="بازدید از پل تاریخی لاتیدان" class="object-cover w-full" width="898" height="600" loading="lazy" decoding="async">
+                        </picture>
                     </div>
                 </div>
 
-                <!-- خط زمانی -->
-                <div class="timeline-list fade-in-right">
-                    <div class="timeline-item">
-                        <span class="timeline-year">قرن ۱۰ هجری</span>
-                        <h4 class="text-xl font-bold text-earth mb-2">ساخت پل در دوره صفویه</h4>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            پل لاتیدان به فرمان شاه عباس اول در مسیر کاروان‌رو شیراز–بندرعباس ساخته شد تا راه ارتباطی منطقه را هموار کند و در انتقال نیرو و تدارکات برای بیرون راندن پرتغالی‌ها از خلیج فارس نقشی کلیدی ایفا کند.
+                <ol class="timeline-list fade-in-right">
+                    <li class="timeline-item">
+                        <span class="inline-block bg-gold/15 text-gold font-bold text-sm px-3 py-1 rounded-full mb-2">دوره صفویه</span>
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-2">ساخت پل بر رودخانه کل</h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                            پل لاتیدان در دوره صفویه بر مسیر کاروان‌رو لار–بندرعباس ساخته شد تا راه ارتباطی بندر با لارستان و داخل فلات ایران را هموار کند؛ مسیری که از روستاهای مُغ احمد، دشت سراهو، کاروانسرای جونگوی، آرابی و قلعه پارو می‌گذشت.
                         </p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">۱۶۸۶ میلادی</span>
-                        <h4 class="text-xl font-bold text-earth mb-2">بازدید انگلبرت کمپفر</h4>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            جهانگرد آلمانی انگلبرت کمپفر در سفرنامه خود از این پل بازدید و وضعیت آن را ثبت کرد؛ روایتی که نشان می‌دهد لاتیدان قرن‌ها مقصد و گذرگاه مسافران بوده است.
+                    </li>
+                    <li class="timeline-item">
+                        <span class="inline-block bg-gold/15 text-gold font-bold text-sm px-3 py-1 rounded-full mb-2">۱۶۸۶ میلادی</span>
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-2">روایت جهانگردان اروپایی</h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                            سیاحان و مورخان از این پل ساروجی به عنوان مهم‌ترین سازه بازمانده از دوران شکوفایی مسیر تجاری جنوب یاد کرده‌اند؛ روایت‌هایی که نشان می‌دهد لاتیدان قرن‌ها گذرگاه بازرگانان و مسافران بوده است.
                         </p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">۱۳۷۲ شمسی</span>
-                        <h4 class="text-xl font-bold text-earth mb-2">آشکار شدن دوباره پل</h4>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            پس از سال‌ها مدفون بودن در زیر خاک، سیلاب بزرگ سال ۱۳۷۲ بقایای پل را نمایان کرد و این شاهکار معماری بار دیگر به چشم مردم و میراث‌دوستان آمد.
+                    </li>
+                    <li class="timeline-item">
+                        <span class="inline-block bg-gold/15 text-gold font-bold text-sm px-3 py-1 rounded-full mb-2">۱ اردیبهشت ۱۳۷۷</span>
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-2">ثبت در فهرست آثار ملی</h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                            پل لاتیدان با شماره ثبت <strong>۲۰۰۵</strong> به عنوان یکی از آثار ملی ایران به ثبت رسید و رسماً در زمره میراث ارزشمند کشور قرار گرفت.
                         </p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">۱۳۷۹ و ۱۳۸۶</span>
-                        <h4 class="text-xl font-bold text-earth mb-2">مرمت‌های مرحله‌ای</h4>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            بخش‌های سالم پل در دو مرحله مرمت شد تا از تخریب بیشتر آن جلوگیری شود؛ پلی که اکنون با شماره ۱۹۹۸ در فهرست آثار ملی ایران به ثبت رسیده است.
+                    </li>
+                    <li class="timeline-item">
+                        <span class="inline-block bg-gold/15 text-gold font-bold text-sm px-3 py-1 rounded-full mb-2">۱۳۷۹ و ۱۳۸۶</span>
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-2">مرمت‌های مرحله‌ای</h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                            بخش‌های سالم پل در دو مرحله مرمت شد تا از تخریب بیشتر آن در برابر سیلاب‌های فصلی رودخانه کل جلوگیری شود.
                         </p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">امروز</span>
-                        <h4 class="text-xl font-bold text-earth mb-2">طرح احیا و مرمت جدید</h4>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            با محوریت اداره کل میراث فرهنگی، گردشگری و صنایع دستی هرمزگان و مشارکت انجمن خیرین میراث فرهنگی، طرح مرمت و احیای این پل به عنوان نماد تاریخ و هویت منطقه در جریان است تا نسل‌های آینده نیز شکوه آن را ببینند.
+                    </li>
+                    <li class="timeline-item">
+                        <span class="inline-block bg-gold/15 text-gold font-bold text-sm px-3 py-1 rounded-full mb-2">امروز</span>
+                        <h4 class="text-xl font-bold text-earth dark:text-gold mb-2">طرح احیا و مرمت جدید</h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+                            با محوریت اداره کل میراث فرهنگی، گردشگری و صنایع دستی هرمزگان و مشارکت خیرین میراث فرهنگی، طرح مرمت و احیای این پل به عنوان نماد تاریخ و هویت منطقه دنبال می‌شود تا نسل‌های آینده نیز شکوه آن را ببینند.
                         </p>
-                    </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== نقشه تعاملی ==================== -->
+    <section id="map-section" class="py-20 bg-white dark:bg-night">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h3 class="section-title">نقشه جاذبه‌ها</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                    موقعیت پل تاریخی، روستا، کوه و رودخانه را روی نقشه ببینید و مسیر خود را برنامه‌ریزی کنید
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto fade-in">
+                <div id="map" class="shadow-2xl border-4 border-white dark:border-nightSoft" role="application" aria-label="نقشه تعاملی جاذبه‌های لاتیدان"></div>
+
+                <div class="flex flex-wrap justify-center gap-3 mt-6">
+                    <button type="button" class="map-focus btn bg-earth text-white text-sm px-5 py-2 hover:bg-gold" data-lat="27.1919" data-lng="55.7572" data-zoom="15">🏛 پل تاریخی</button>
+                    <button type="button" class="map-focus btn bg-earth text-white text-sm px-5 py-2 hover:bg-gold" data-lat="27.1428" data-lng="55.7957" data-zoom="15">🏘 روستای لاتیدان</button>
+                    <button type="button" class="map-focus btn bg-earth text-white text-sm px-5 py-2 hover:bg-gold" data-lat="27.1600" data-lng="55.7957" data-zoom="14">⛰ کوه لاتیدان</button>
+                    <button type="button" class="map-focus btn bg-earth text-white text-sm px-5 py-2 hover:bg-gold" data-lat="27.1700" data-lng="55.7700" data-zoom="13">🌊 رودخانه کل</button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=27.1919,55.7572" target="_blank" rel="noopener" class="btn bg-gold text-white text-sm px-5 py-2 hover:bg-yellow-600">🧭 مسیریابی گوگل‌مپ</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== بخش طبیعت و فرهنگ ==================== -->
-    <section id="culture" class="py-20 bg-white">
+    <!-- ==================== راهنمای سفر ==================== -->
+    <section id="travel" class="py-20 bg-gradient-to-b from-sand/30 to-white dark:from-nightSoft dark:to-night">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
-                <h3 class="text-3xl md:text-4xl font-bold text-earth mb-4">طبیعت و فرهنگ</h3>
-                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                <h3 class="section-title">راهنمای سفر به لاتیدان</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                    هرآنچه پیش از حرکت باید بدانید
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="card p-6 fade-in">
+                    <div class="w-14 h-14 bg-river/15 rounded-2xl flex items-center justify-center text-3xl mb-4">🚗</div>
+                    <h4 class="text-lg font-bold text-earth dark:text-gold mb-2">مسیر دسترسی</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">
+                        از بندرعباس به سمت غرب و جاده بندر خمیر/لار حرکت کنید. فاصله تا پل حدود ۵۰ تا ۸۰ کیلومتر است و با خودروی شخصی حدود یک ساعت زمان می‌برد.
+                    </p>
+                </div>
+
+                <div class="card p-6 fade-in">
+                    <div class="w-14 h-14 bg-gold/15 rounded-2xl flex items-center justify-center text-3xl mb-4">🗓</div>
+                    <h4 class="text-lg font-bold text-earth dark:text-gold mb-2">بهترین زمان</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">
+                        آبان تا اسفند بهترین فصل سفر است. تابستان جنوب بسیار گرم و شرجی است. برای عکاسی، ساعت طلایی صبح زود یا نزدیک غروب را انتخاب کنید.
+                    </p>
+                </div>
+
+                <div class="card p-6 fade-in">
+                    <div class="w-14 h-14 bg-mountain/15 rounded-2xl flex items-center justify-center text-3xl mb-4">🎒</div>
+                    <h4 class="text-lg font-bold text-earth dark:text-gold mb-2">چه ببرید</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">
+                        آب کافی، کلاه و ضدآفتاب، کفش مناسب پیاده‌روی روی بستر سنگلاخی رودخانه و شارژر همراه. امکانات رفاهی در محل پل بسیار محدود است.
+                    </p>
+                </div>
+
+                <div class="card p-6 fade-in">
+                    <div class="w-14 h-14 bg-earth/15 rounded-2xl flex items-center justify-center text-3xl mb-4">🛡</div>
+                    <h4 class="text-lg font-bold text-earth dark:text-gold mb-2">نکات ایمنی</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed text-justify">
+                        در فصل بارندگی به بستر رودخانه نزدیک نشوید؛ سیلاب ناگهانی است. از بالا رفتن روی دهانه‌های فرسوده پل خودداری کنید و آثار تاریخی را دست‌نخورده باقی بگذارید.
+                    </p>
+                </div>
+            </div>
+
+            <!-- اشتراک‌گذاری -->
+            <div class="max-w-3xl mx-auto mt-16 text-center fade-in">
+                <p class="text-earth dark:text-gold font-bold text-lg mb-4">این صفحه را با دوستانتان به اشتراک بگذارید</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a id="share-telegram" href="#" target="_blank" rel="noopener" class="btn bg-[#229ED9] text-white text-sm px-6 py-2.5 hover:opacity-90">تلگرام</a>
+                    <a id="share-whatsapp" href="#" target="_blank" rel="noopener" class="btn bg-[#25D366] text-white text-sm px-6 py-2.5 hover:opacity-90">واتس‌اپ</a>
+                    <a id="share-twitter" href="#" target="_blank" rel="noopener" class="btn bg-black text-white text-sm px-6 py-2.5 hover:opacity-90">ایکس (توییتر)</a>
+                    <button type="button" id="share-copy" class="btn bg-earth text-white text-sm px-6 py-2.5 hover:bg-gold">کپی لینک</button>
+                </div>
+                <p id="copy-toast" class="text-mountain dark:text-gold font-semibold mt-3 opacity-0 transition-opacity">لینک کپی شد ✓</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== بخش طبیعت و فرهنگ ==================== -->
+    <section id="culture" class="py-20 bg-white dark:bg-night">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h3 class="section-title">طبیعت و فرهنگ</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                     ترکیبی منحصربه‌فرد از زیبایی‌های طبیعی و میراث فرهنگی غنی
                 </p>
             </div>
 
-            <!-- گرید ویژگی‌ها -->
             <div class="max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <!-- طبیعت -->
-                    <div class="bg-gradient-to-b from-white to-sand/20 rounded-2xl p-8 shadow-lg fade-in-left">
+                    <div class="bg-gradient-to-b from-white to-sand/20 dark:from-nightSoft dark:to-night rounded-2xl p-8 shadow-lg fade-in-left">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-16 h-16 bg-mountain/20 rounded-full flex items-center justify-center">
-                                <svg class="w-8 h-8 text-mountain" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-16 h-16 bg-mountain/20 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-8 h-8 text-mountain" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <h4 class="text-2xl font-bold text-earth">ویژگی‌های طبیعی</h4>
+                            <h4 class="text-2xl font-bold text-earth dark:text-gold">ویژگی‌های طبیعی</h4>
                         </div>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">رودخانه سیلابی کل</p>
-                                    <p class="text-gray-600 text-sm">آبراهه پرآب و حیات‌بخش با مناظر فصلی متنوع</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">رودخانه سیلابی کل</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">آبراهه پرآب و حیات‌بخش با مناظر فصلی متنوع</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">مناظر کوهستانی</p>
-                                    <p class="text-gray-600 text-sm">ارتفاعات صخره‌ای با پوشش گیاهی منحصربه‌فرد</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">مناظر کوهستانی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">ارتفاعات صخره‌ای با پوشش گیاهی منحصربه‌فرد</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">آب و هوای گرم و مرطوب</p>
-                                    <p class="text-gray-600 text-sm">اقلیم خاص جنوب ایران با زمستان‌های دلپذیر</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">آب و هوای گرم و مرطوب</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">اقلیم خاص جنوب ایران با زمستان‌های دلپذیر</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">تنوع زیستی</p>
-                                    <p class="text-gray-600 text-sm">گونه‌های گیاهی و جانوری متنوع منطقه جنوب</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">تنوع زیستی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">گونه‌های گیاهی و جانوری متنوع منطقه جنوب</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- فرهنگ -->
-                    <div class="bg-gradient-to-b from-white to-gold/10 rounded-2xl p-8 shadow-lg fade-in-right">
+                    <div class="bg-gradient-to-b from-white to-gold/10 dark:from-nightSoft dark:to-night rounded-2xl p-8 shadow-lg fade-in-right">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center">
-                                <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
                             </div>
-                            <h4 class="text-2xl font-bold text-earth">میراث فرهنگی</h4>
+                            <h4 class="text-2xl font-bold text-earth dark:text-gold">میراث فرهنگی</h4>
                         </div>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">معماری صفوی</p>
-                                    <p class="text-gray-600 text-sm">پل تاریخی نمونه‌ای از هنر معماری دوره صفویه</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">معماری صفوی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">پل ساروجی، نمونه‌ای برجسته از پل‌سازی دوره صفویه</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">مسیر جاده ابریشم</p>
-                                    <p class="text-gray-600 text-sm">نقطه مهم در مسیر تجاری جاده ابریشم جنوبی</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">مسیر تجاری تاریخی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">حلقه‌ای از راه ارتباطی بندرعباس به لارستان</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">سنت‌های محلی</p>
-                                    <p class="text-gray-600 text-sm">فرهنگ غنی و آیین‌های محلی مردم هرمزگان</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">سنت‌های محلی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">فرهنگ غنی و آیین‌های محلی مردم هرمزگان</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <svg class="w-6 h-6 text-gold mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                                <span class="text-gold mt-1 shrink-0">✔</span>
                                 <div>
-                                    <p class="font-semibold text-gray-800">صنایع دستی</p>
-                                    <p class="text-gray-600 text-sm">هنرهای سنتی و دستبافته‌های بومی منطقه</p>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">صنایع دستی</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">هنرهای سنتی و دستبافته‌های بومی منطقه</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- بنر تبلیغاتی -->
+                <!-- بنر -->
                 <div class="bg-gradient-to-r from-earth to-gold rounded-2xl p-8 md:p-12 text-white text-center fade-in">
                     <h4 class="text-2xl md:text-3xl font-bold mb-4">تجربه‌ای فراموش‌نشدنی در دل تاریخ</h4>
-                    <p class="text-base md:text-lg opacity-90 max-w-3xl mx-auto leading-relaxed">
+                    <p class="text-base md:text-lg opacity-90 max-w-3xl mx-auto leading-relaxed text-justify md:text-center">
                         لاتیدان تلفیقی از معماری باستانی، طبیعت دست‌نخورده و مهمان‌نوازی گرم مردم جنوب است. از عبور از پل تاریخی گرفته تا لذت بردن از غذاهای محلی، هر لحظه در این روستا خاطره‌ای ماندگار خواهد بود. بیایید و این گنجینه پنهان هرمزگان را کشف کنید.
                     </p>
                 </div>
@@ -641,84 +778,74 @@
         </div>
     </section>
 
-    <!-- ==================== بخش سوالات متداول ==================== -->
-    <section id="faq" class="py-20 bg-gradient-to-b from-sand/30 to-white">
+    <!-- ==================== سوالات متداول ==================== -->
+    <section id="faq" class="py-20 bg-gradient-to-b from-sand/30 to-white dark:from-nightSoft dark:to-night">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
-                <h3 class="text-3xl md:text-4xl font-bold text-earth mb-4">سوالات متداول</h3>
-                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                <h3 class="section-title">سوالات متداول</h3>
+                <div class="section-divider mb-4"></div>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                     پاسخ پرسش‌های پرتکرار درباره سفر به لاتیدان
                 </p>
             </div>
 
             <div class="max-w-3xl mx-auto space-y-4">
-                <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden fade-in">
+                <div class="faq-item bg-white dark:bg-nightSoft rounded-2xl shadow-md overflow-hidden fade-in">
                     <button type="button" class="faq-question w-full flex justify-between items-center gap-4 p-6 text-right" aria-expanded="false">
-                        <span class="text-lg font-bold text-earth">پل لاتیدان کجاست و چگونه می‌توان به آن رسید؟</span>
-                        <svg class="faq-chevron w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <span class="text-lg font-bold text-earth dark:text-gold">پل لاتیدان کجاست و چگونه می‌توان به آن رسید؟</span>
+                        <svg class="faq-icon w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6">
-                        <p class="text-gray-600 leading-relaxed text-justify pb-6">
-                            پل تاریخی لاتیدان در حدود ۵۰ کیلومتری غرب بندرعباس، بر روی رودخانه کل و در نزدیکی روستای لاتیدان (کلمتلی) قرار دارد. برای رسیدن به آن می‌توانید از جاده بندرعباس به سمت بندر خمیر حرکت کنید.
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify pb-6">
+                            پل تاریخی لاتیدان در حدود ۵۰ تا ۸۰ کیلومتری غرب بندرعباس، بر روی رودخانه کل و در محدوده روستاهای لاتیدان، نیمه‌کار و آرابی قرار دارد. برای رسیدن به آن از جاده بندرعباس به سمت بندر خمیر و لار حرکت کنید.
                         </p>
                     </div>
                 </div>
 
-                <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden fade-in">
+                <div class="faq-item bg-white dark:bg-nightSoft rounded-2xl shadow-md overflow-hidden fade-in">
                     <button type="button" class="faq-question w-full flex justify-between items-center gap-4 p-6 text-right" aria-expanded="false">
-                        <span class="text-lg font-bold text-earth">چرا به این پل «پل کول» هم می‌گویند؟</span>
-                        <svg class="faq-chevron w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <span class="text-lg font-bold text-earth dark:text-gold">چرا به این پل «پل کول» هم می‌گویند؟</span>
+                        <svg class="faq-icon w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6">
-                        <p class="text-gray-600 leading-relaxed text-justify pb-6">
-                            «پل کول» نام محلی این پل است که از رودخانه کول (کل) گرفته شده است؛ رودخانه‌ای که پل بر روی بستر عریض آن ساخته شده و در فصل بارندگی طغیان‌های فصلی دارد.
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify pb-6">
+                            «پل کول» نام محلی این پل است که از رودخانه کول (کل) گرفته شده؛ رودخانه‌ای سیلابی که پل بر روی بستر عریض آن ساخته شده و در فصل بارندگی طغیان‌های فصلی دارد.
                         </p>
                     </div>
                 </div>
 
-                <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden fade-in">
+                <div class="faq-item bg-white dark:bg-nightSoft rounded-2xl shadow-md overflow-hidden fade-in">
                     <button type="button" class="faq-question w-full flex justify-between items-center gap-4 p-6 text-right" aria-expanded="false">
-                        <span class="text-lg font-bold text-earth">بهترین زمان بازدید از لاتیدان چه فصلی است؟</span>
-                        <svg class="faq-chevron w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <span class="text-lg font-bold text-earth dark:text-gold">بهترین زمان بازدید از لاتیدان چه فصلی است؟</span>
+                        <svg class="faq-icon w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6">
-                        <p class="text-gray-600 leading-relaxed text-justify pb-6">
-                            بهترین زمان سفر به این منطقه از پاییز تا اوایل بهار است که هوا خنک‌تر و مطبوع‌تر است. در فصل بارندگی نیز رودخانه کل پرآب می‌شود و مناظر طبیعی منطقه تماشایی‌تر از همیشه خواهد بود.
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify pb-6">
+                            از اواسط پاییز تا اوایل بهار بهترین زمان بازدید است، چون هوای جنوب ایران در این ماه‌ها معتدل و دلپذیر است. در فصل بارندگی رودخانه کل پرآب می‌شود و مناظر تماشایی‌تری دارد.
                         </p>
                     </div>
                 </div>
 
-                <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden fade-in">
+                <div class="faq-item bg-white dark:bg-nightSoft rounded-2xl shadow-md overflow-hidden fade-in">
                     <button type="button" class="faq-question w-full flex justify-between items-center gap-4 p-6 text-right" aria-expanded="false">
-                        <span class="text-lg font-bold text-earth">آیا پل لاتیدان در فهرست آثار ملی ثبت شده است؟</span>
-                        <svg class="faq-chevron w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <span class="text-lg font-bold text-earth dark:text-gold">آیا پل لاتیدان در فهرست آثار ملی ثبت شده است؟</span>
+                        <svg class="faq-icon w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6">
-                        <p class="text-gray-600 leading-relaxed text-justify pb-6">
-                            بله، پل تاریخی لاتیدان با شماره ۱۹۹۸ در فهرست آثار ملی ایران به ثبت رسیده است و هم‌اکنون طرح مرمت و احیای آن با محوریت میراث فرهنگی، گردشگری و صنایع دستی هرمزگان در جریان است.
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify pb-6">
+                            بله، این پل در تاریخ یکم اردیبهشت ۱۳۷۷ با شماره ثبت <strong>۲۰۰۵</strong> به عنوان یکی از آثار ملی ایران به ثبت رسیده است.
                         </p>
                     </div>
                 </div>
 
-                <div class="faq-item bg-white rounded-2xl shadow-md overflow-hidden fade-in">
+                <div class="faq-item bg-white dark:bg-nightSoft rounded-2xl shadow-md overflow-hidden fade-in">
                     <button type="button" class="faq-question w-full flex justify-between items-center gap-4 p-6 text-right" aria-expanded="false">
-                        <span class="text-lg font-bold text-earth">چه جاذبه‌های دیگری در اطراف لاتیدان وجود دارد؟</span>
-                        <svg class="faq-chevron w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <span class="text-lg font-bold text-earth dark:text-gold">چه جاذبه‌های دیگری در اطراف لاتیدان وجود دارد؟</span>
+                        <svg class="faq-icon w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6">
-                        <p class="text-gray-600 leading-relaxed text-justify pb-6">
-                            علاوه بر پل تاریخی، می‌توانید از کوه مهیب لاتیدان، رودخانه کل و روستاهای همجوار مانند گچین بالا، دمیلو، آرابی و نیمه‌کار دیدن کنید؛ روستاهایی که هرکدام جلوه‌ای از زندگی اصیل و سنتی جنوب ایران هستند.
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-justify pb-6">
+                            علاوه بر پل تاریخی، می‌توانید از کوه لاتیدان، رودخانه کل و روستاهای همجوار مانند گچین بالا، دمیلو، آرابی و نیمه‌کار دیدن کنید؛ روستاهایی که هرکدام جلوه‌ای از زندگی اصیل و سنتی جنوب ایران هستند.
                         </p>
                     </div>
                 </div>
@@ -726,8 +853,8 @@
         </div>
     </section>
 
-    <!-- ==================== بخش دعوت به سفر ==================== -->
-    <section id="visit" class="py-20 bg-white">
+    <!-- ==================== دعوت به سفر ==================== -->
+    <section id="visit" class="py-20 bg-white dark:bg-night">
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto bg-gradient-to-l from-earth via-mountain to-river rounded-3xl p-8 md:p-16 text-white text-center shadow-2xl fade-in relative overflow-hidden">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.25),transparent_60%)]" aria-hidden="true"></div>
@@ -737,12 +864,8 @@
                         گنجینه‌ای پنج‌صدساله در انتظار شماست؛ برنامه سفرتان را بچینید و در دل تاریخ هرمزگان قدم بزنید.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://www.google.com/maps/search/?api=1&query=%D8%B1%D9%88%D8%B3%D8%AA%D8%A7%DB%8C%20%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86%20%DA%A9%D9%84%D9%85%D8%AA%D9%84%DB%8C" target="_blank" rel="noopener" class="inline-block bg-gold hover:bg-gold/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                            مسیریابی در نقشه
-                        </a>
-                        <a href="#attractions" class="inline-block bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl border-2 border-white/50">
-                            کشف جاذبه‌ها
-                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=27.1919,55.7572" target="_blank" rel="noopener" class="btn btn-primary py-4">مسیریابی به پل</a>
+                        <a href="#travel" class="btn btn-outline py-4 bg-white/20 backdrop-blur-sm">راهنمای سفر</a>
                     </div>
                 </div>
             </div>
@@ -750,114 +873,98 @@
     </section>
 
     <!-- ==================== Footer ==================== -->
-    <footer class="bg-gradient-to-r from-earth to-mountain text-white pt-16 pb-8">
+    <footer class="bg-gradient-to-r from-earth to-mountain dark:from-nightSoft dark:to-night text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-                <!-- درباره -->
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-12 h-12 bg-gold/30 rounded-full flex items-center justify-center">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="w-12 h-12 bg-gold/30 rounded-full flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
                             </svg>
                         </div>
-                        <h5 class="text-2xl font-bold">روستای لاتیدان (کلمتلی)</h5>
+                        <h5 class="text-xl md:text-2xl font-bold">روستای لاتیدان (کلمتلی)</h5>
                     </div>
-                    <p class="text-base opacity-90 leading-relaxed text-justify">
+                    <p class="opacity-90 leading-relaxed text-justify">
                         لاتیدان، جایی که تاریخ با طبیعت آمیخته است. این روستای باستانی با پل تاریخی خود که طولانی‌ترین پل تاریخی ایران است، میزبان گردشگران و علاقه‌مندان به میراث فرهنگی و طبیعی ایران است.
                     </p>
                 </div>
 
-                <!-- دسترسی سریع -->
                 <div>
                     <h5 class="text-xl font-bold mb-4 border-b-2 border-gold/50 pb-2 inline-block">دسترسی سریع</h5>
                     <nav class="flex flex-col gap-3 mt-4" aria-label="لینک‌های فوتر">
-                        <a href="#home" class="hover:text-gold transition-colors flex items-center gap-2">
-                            <span class="text-gold">◂</span> خانه
-                        </a>
-                        <a href="#about" class="hover:text-gold transition-colors flex items-center gap-2">
-                            <span class="text-gold">◂</span> درباره روستا
-                        </a>
-                        <a href="#attractions" class="hover:text-gold transition-colors flex items-center gap-2">
-                            <span class="text-gold">◂</span> جاذبه‌ها
-                        </a>
-                        <a href="#history" class="hover:text-gold transition-colors flex items-center gap-2">
-                            <span class="text-gold">◂</span> تاریخچه پل
-                        </a>
-                        <a href="#faq" class="hover:text-gold transition-colors flex items-center gap-2">
-                            <span class="text-gold">◂</span> سوالات متداول
-                        </a>
+                        <a href="#about" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> درباره روستا</a>
+                        <a href="#attractions" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> جاذبه‌ها</a>
+                        <a href="#history" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> تاریخچه پل</a>
+                        <a href="#map-section" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> نقشه تعاملی</a>
+                        <a href="#travel" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> راهنمای سفر</a>
+                        <a href="#faq" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> سوالات متداول</a>
+                        <a href="en/" class="hover:text-gold transition-colors"><span class="text-gold">◂</span> English version</a>
                     </nav>
                 </div>
 
-                <!-- موقعیت -->
                 <div>
                     <h5 class="text-xl font-bold mb-4 border-b-2 border-gold/50 pb-2 inline-block">موقعیت و دسترسی</h5>
-                    <div class="space-y-4 mt-4 text-sm md:text-base">
+                    <div class="space-y-4 mt-4">
                         <p class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
+                            <span class="text-gold shrink-0">📍</span>
                             <span class="opacity-90 leading-relaxed">استان هرمزگان، شهرستان بندرعباس، دهستان گچین</span>
                         </p>
                         <p class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                            <span class="opacity-90">پل لاتیدان - اثر ثبت ملی ایران به شماره ۱۹۹۸</span>
+                            <span class="text-gold shrink-0">🏛</span>
+                            <span class="opacity-90">پل لاتیدان — اثر ثبت ملی ایران به شماره ۲۰۰۵</span>
                         </p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=%D9%BE%D9%84%20%D9%84%D8%A7%D8%AA%DB%8C%D8%AF%D8%A7%D9%86" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold/20 hover:bg-gold/30 text-white font-semibold py-3 px-6 rounded-full transition-colors">
-                            مشاهده در نقشه
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
+                        <p class="flex items-start gap-3">
+                            <span class="text-gold shrink-0">🧭</span>
+                            <span class="opacity-90 ltr-nums" dir="ltr">27.1919° N, 55.7572° E</span>
+                        </p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=27.1919,55.7572" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold/20 hover:bg-gold/30 text-white font-semibold py-3 px-6 rounded-full transition-colors">
+                            مسیریابی در نقشه
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- کپی‌رایت -->
             <div class="border-t border-white/20 mt-12 pt-8 text-center">
                 <p class="text-sm opacity-90">
-                    © <span id="current-year">۱۴۰۳</span> روستای لاتیدان (کلمتلی) — ساخته شده با <span class="text-gold">♥</span> در جنوب ایران
+                    © <span id="current-year">۱۴۰۴</span> روستای لاتیدان (کلمتلی) — ساخته شده با <span class="text-gold">♥</span> در جنوب ایران
+                </p>
+                <p class="text-xs opacity-70 mt-2">
+                    کد این وب‌سایت متن‌باز است —
+                    <a href="https://github.com/AminGhadery/latidan" target="_blank" rel="noopener" class="underline hover:text-gold">مشاهده در گیت‌هاب</a>
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- دکمه بازگشت به بالا -->
-    <button id="scroll-to-top" class="fixed bottom-8 left-8 bg-gold hover:bg-gold/90 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible z-40" aria-label="بازگشت به بالای صفحه">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="scroll-to-top" class="fixed bottom-8 left-8 bg-gold hover:bg-yellow-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center z-40" aria-label="بازگشت به بالای صفحه">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
 
     <!-- ==================== لایت‌باکس گالری ==================== -->
     <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="نمایش بزرگ تصویر">
-        <button type="button" id="lightbox-close" class="lightbox-close" aria-label="بستن">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+        <button type="button" id="lightbox-close" class="absolute top-5 left-5 text-white w-11 h-11 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center" aria-label="بستن">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        <button type="button" id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="تصویر قبلی">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
+        <button type="button" id="lightbox-prev" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center" aria-label="تصویر قبلی">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
         </button>
-        <button type="button" id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="تصویر بعدی">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
+        <button type="button" id="lightbox-next" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center" aria-label="تصویر بعدی">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         </button>
-        <div class="lightbox-content">
+        <figure class="text-center px-4">
             <img id="lightbox-image" src="" alt="">
-            <p id="lightbox-caption" class="lightbox-caption"></p>
-            <p id="lightbox-counter" class="lightbox-counter"></p>
-        </div>
+            <figcaption class="text-white mt-4">
+                <span id="lightbox-caption" class="block text-lg font-bold"></span>
+                <span id="lightbox-counter" class="block text-sm opacity-70 mt-1"></span>
+            </figcaption>
+        </figure>
     </div>
 
-    <!-- فایل JavaScript سفارشی -->
-    <script src="script.js"></script>
-
+    <script src="assets/vendor/leaflet/leaflet.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
