@@ -15,6 +15,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* جلوگیری از مخفی شدن عنوان بخش‌ها زیر هدر ثابت */
+section[id] {
+    scroll-margin-top: 96px;
+}
+
 /* ==================== انیمیشن‌های کلیدی ==================== */
 @keyframes fadeInDown {
     from {
@@ -151,6 +156,15 @@ html {
     z-index: -1;
 }
 
+/* ==================== کارت‌های آمار ==================== */
+.stat-card {
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+}
+
 /* ==================== کارت‌های جاذبه ==================== */
 .attraction-card {
     cursor: pointer;
@@ -236,5 +250,235 @@ html {
 @media (max-width: 768px) {
     .parallax {
         background-attachment: scroll;
+    }
+}
+
+/* ==================== خط زمانی تاریخچه ==================== */
+.timeline-list {
+    position: relative;
+}
+
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(to bottom, #D4AF37, #8B7355, #4A90A4);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-right: 44px;
+    margin-bottom: 36px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D4AF37;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25);
+}
+
+.timeline-year {
+    display: inline-block;
+    background: #8B7355;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+}
+
+/* ==================== سوالات متداول ==================== */
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 400px;
+}
+
+.faq-item .faq-chevron {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+/* ==================== گالری و لایت‌باکس ==================== */
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+.lightbox-zoom-hint {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lightbox-trigger:hover .lightbox-zoom-hint,
+.lightbox-trigger:focus-visible .lightbox-zoom-hint {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 92vw;
+}
+
+.lightbox-content img {
+    max-width: 92vw;
+    max-height: 78vh;
+    border-radius: 1rem;
+    box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+}
+
+.lightbox-caption {
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 101;
+}
+
+.lightbox-close:hover {
+    background: rgba(212, 175, 55, 0.85);
+    transform: rotate(90deg);
+}
+
+.lightbox-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 101;
+}
+
+.lightbox-nav:hover {
+    background: rgba(212, 175, 55, 0.85);
+}
+
+.lightbox-prev {
+    right: 16px;
+}
+
+.lightbox-next {
+    left: 16px;
+}
+
+@media (max-width: 640px) {
+    .lightbox-nav {
+        top: auto;
+        bottom: 24px;
+        transform: none;
+    }
+
+    .lightbox-prev {
+        right: 20%;
+    }
+
+    .lightbox-next {
+        left: 20%;
+    }
+}
+
+/* ==================== دسترسی‌پذیری و کاهش حرکت ==================== */
+::selection {
+    background: rgba(212, 175, 55, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
