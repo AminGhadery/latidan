@@ -400,48 +400,6 @@
         });
     }
 
-    /* ==================== اشتراک‌گذاری ==================== */
-    function initShare() {
-        var url = window.location.href.split('#')[0];
-        var title = document.title;
-        var enc = encodeURIComponent;
-
-        var map = {
-            'share-telegram': 'https://t.me/share/url?url=' + enc(url) + '&text=' + enc(title),
-            'share-whatsapp': 'https://api.whatsapp.com/send?text=' + enc(title + ' ' + url),
-            'share-twitter': 'https://twitter.com/intent/tweet?url=' + enc(url) + '&text=' + enc(title)
-        };
-
-        Object.keys(map).forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) el.href = map[id];
-        });
-
-        var copyBtn = document.getElementById('share-copy');
-        var toast = document.getElementById('copy-toast');
-        if (copyBtn) {
-            copyBtn.addEventListener('click', function () {
-                var done = function () {
-                    if (!toast) return;
-                    toast.style.opacity = '1';
-                    setTimeout(function () { toast.style.opacity = '0'; }, 2200);
-                };
-
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(url).then(done).catch(done);
-                } else {
-                    var input = document.createElement('input');
-                    input.value = url;
-                    document.body.appendChild(input);
-                    input.select();
-                    try { document.execCommand('copy'); } catch (e) {}
-                    document.body.removeChild(input);
-                    done();
-                }
-            });
-        }
-    }
-
     /* ==================== سال شمسی جاری ==================== */
     function initYear() {
         var el = document.getElementById('current-year');
@@ -485,7 +443,6 @@
         initSmoothScroll();
         initActiveNav();
         initScrollToTop();
-        initShare();
         initYear();
         initServiceWorker();
     });
